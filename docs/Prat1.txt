@@ -1,0 +1,31 @@
+# Part 1 – Requirement Review
+
+Review the User Story and Acceptance Criteria.
+
+Identify:
+
+* Requirement Gaps
+* Assumptions
+* Risks
+
+---
+
+## Candidate Answer
+
+### Requirement Gaps (ช่องว่างของ Requirement)
+1.ยังไม่ได้ระบุกฎการตรวจสอบ National ID อย่างชัดเจน
+เช่น จำนวนหลัก รูปแบบข้อมูล และการตรวจสอบ Checksum
+2.ยังไม่ได้ระบุรายละเอียดของ Verification Summary และข้อมูล Existing Agent ที่ต้องแสดง
+เช่น Field หรือข้อมูลที่จำเป็นต้องแสดงบนหน้าจอ
+3.ยังไม่ได้ระบุพฤติกรรมของระบบเมื่อมีการตรวจสอบหลายครั้ง หรือมีการเปลี่ยน National ID หลังจากตรวจสอบแล้ว
+เช่น ระบบต้อง Reset ข้อมูลเดิมหรือไม่ และสถานะของปุ่ม Continue Registration ต้องเปลี่ยนอย่างไร
+
+### Assumptions (ข้อสมมติฐาน)
+1.National ID เป็นข้อมูล Unique Identifier สำหรับใช้ค้นหา Agent ที่มีอยู่ในระบบ
+2.Existing Agent Verification Service สามารถให้ข้อมูล Agent ที่ถูกต้องและครบถ้วน
+3.ปุ่ม Continue Registration จะสามารถใช้งานได้เฉพาะเมื่อผลการตรวจสอบเป็น New Applicant เท่านั้น
+
+### Risks (ความเสี่ยง)
+1.การตรวจสอบข้อมูลผิดพลาดอาจทำให้เกิดการลงทะเบียน Agent ซ้ำในระบบ
+2.หาก Existing Agent Service ไม่สามารถใช้งานได้ อาจทำให้กระบวนการลงทะเบียนไม่สามารถดำเนินการต่อได้
+3.ข้อมูลส่วนบุคคลของ Agent อาจถูกเปิดเผย หากไม่มีการควบคุมสิทธิ์การเข้าถึงข้อมูลที่เหมาะสม
