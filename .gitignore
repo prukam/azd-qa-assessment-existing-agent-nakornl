@@ -1,0 +1,19 @@
+# Robot Framework
+output.xml
+log.html
+report.html
+
+# Browser Library / Playwright
+.browser/
+playwright-log.txt
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

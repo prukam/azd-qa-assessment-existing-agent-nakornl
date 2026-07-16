@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AZD Existing Agent Verification</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Existing Agent Verification</h1>
+      <p class="subtitle">
+        Enter applicant National ID to check existing agent status.
+      </p>
+
+      <label for="national-id-input">National ID</label>
+
+      <input
+        id="national-id-input"
+        class="national-id-input form-control ng-pristine ng-valid"
+        data-testid="national-id-input"
+        placeholder="Enter 13-digit National ID"
+        maxlength="15"
+        autocomplete="off"
+      />
+
+      <div class="actions">
+        <button
+          id="check-existing-agent-button"
+          class="btn btn-primary check-existing-agent-button"
+          data-testid="check-existing-agent-button"
+          type="button"
+        >
+          Check Existing Agent
+        </button>
+
+        <button
+          class="btn hidden-check-button"
+          type="button"
+          style="display:none"
+        >
+          Check Existing Agent
+        </button>
+      </div>
+
+      <div
+        id="existing-agent-result"
+        class="result"
+        data-testid="existing-agent-result"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+      <section
+        id="verification-summary-section"
+        class="detail-section"
+        data-testid="verification-summary-section"
+        hidden
+      >
+        <h2>Verification Summary</h2>
+
+        <div class="detail-row">
+          <span>Status</span>
+          <strong id="verification-status" data-testid="verification-status">-</strong>
+        </div>
+
+        <div id="reference-row" class="detail-row" data-testid="reference-row">
+          <span>Reference No.</span>
+          <strong id="reference-no" data-testid="reference-no">-</strong>
+        </div>
+
+        <div id="checked-by-row" class="detail-row" data-testid="checked-by-row">
+          <span>Checked By</span>
+          <strong id="checked-by" data-testid="checked-by">-</strong>
+        </div>
+
+        <div id="agent-code-row" class="detail-row" data-testid="agent-code-row" hidden>
+          <span>Agent Code</span>
+          <strong id="agent-code" data-testid="agent-code">-</strong>
+        </div>
+
+        <div id="agent-name-row" class="detail-row" data-testid="agent-name-row" hidden>
+          <span>Agent Name</span>
+          <strong id="agent-name" data-testid="agent-name">-</strong>
+        </div>
+
+        <div id="agent-branch-row" class="detail-row" data-testid="agent-branch-row" hidden>
+          <span>Branch</span>
+          <strong id="agent-branch" data-testid="agent-branch">-</strong>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button
+          id="continue-registration-button"
+          class="btn btn-secondary"
+          data-testid="continue-registration-button"
+          type="button"
+          disabled
+        >
+          Continue Registration
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
